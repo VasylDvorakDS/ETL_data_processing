@@ -1,5 +1,5 @@
 /*
-chcp 65001 && spark-shell -i D:\ETL_data_processing\Task_1\Task_1_in_home\s1.scala --conf "spark.driver.extraJavaOptions=-Dfile.encoding=utf-8"
+chcp 65001 && spark-shell -i D:\ETL_data_processing\Task_1\Task_1_in_office\s1.scala --conf "spark.driver.extraJavaOptions=-Dfile.encoding=utf-8"
 */
 
 import org.apache.spark.sql.SparkSession
@@ -33,7 +33,7 @@ if (1 == 1) {
     .option("maxRowsInMemory", 20)
     .option("excerptSize", 10)
     .option("header", "true")
-    .load("D:/ETL_data_processing/Task_1/Task_1_in_home/Sem1.xlsx")
+    .load("D:/ETL_data_processing/Task_1/Task_1_in_office/Sem1.xlsx")
   
   df1.show()
 
