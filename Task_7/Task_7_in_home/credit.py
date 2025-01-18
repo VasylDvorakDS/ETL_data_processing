@@ -37,6 +37,7 @@ def read_table(name_table, **kwargs):
     ti.xcom_push(key=name_table, value=df2)
 
 def save_drawing(**kwargs):
+    spark.stop()
     ti = kwargs['ti']
     df_without_repayment = ti.xcom_pull(key='Without_repayment')
     df_120000 = ti.xcom_pull(key='p_120000')
